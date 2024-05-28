@@ -196,3 +196,52 @@ for (i = 10; i <= 20; i++) {
     }
 }
 // Print odd numbers in an array ends hear //
+
+// Convert all the strings to title caps in a string array Arrow function starts hear //
+  Function : titleCase = (str) => {
+                    str = str.toLowerCase().split(' ');
+                    for (var i = 0; i < str.length; i++) {
+                      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+                    } 
+                    return str.join(' ');
+                  }  
+// Convert all the strings to title caps in a string array ends hear //
+
+
+// 2. Return all the palindromes in an array starts hear //
+function isPalindrome(s)
+{
+    let a = s;
+    s = s.split('').reverse().join('');
+    return s == a;
+}
+ 
+function PalindromicStrings(arr,N)
+{
+    let ans = [];
+    for (let i = 0; i < N; i++) {
+        if (isPalindrome(arr[i])) {
+            ans.push(arr[i]);
+        }
+    }
+    return ans;
+}
+ 
+let arr = [ "abc", "car", "ada", "racecar", "cool" ];
+let N = arr.length;
+let s = PalindromicStrings(arr, N);
+if(s.length == 0)
+    document.write("-1");
+for(let st of s)
+    document.write(st, " ");
+    // Return all the palindromes in an array //
+
+// Convert all the strings to title caps in a string array IIFE method //
+    IIFE : (function (str) {
+                    str = str.toLowerCase().split(' ');
+                    for (var i = 0; i < str.length; i++) {
+                      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+                    } 
+                    return str.join(' ');
+})("Sathyagar IS MY NAME");
+// Convert all the strings to title caps in a string array IIFE method end//
